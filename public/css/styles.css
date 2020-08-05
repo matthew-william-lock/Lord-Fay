@@ -21,15 +21,31 @@ body {
      right: 0px;
  
      /* must have dimension */
-     width: 500px;
+     width: 800px;
      height: 200px;
 
      padding: 50px;
 }
 
+.quote h1 {
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+
+.quote p {
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding:10px;
+}
+
+hr {
+    width: 100%;
+    padding:1px;
+}
+
 .quote p,.quote h1 {
     color:white;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
     font-family: "Arial","Times New Roman", Times, serif;
 }
 
