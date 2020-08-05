@@ -1,0 +1,35 @@
+body {
+    background-image: url("/img/lordfay.jpg"); 
+    background-position: right top; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.black-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.quote {
+     /* fixed within viewport */
+     position: fixed;
+
+     /* set position */
+     top: 0px;
+     right: 0px;
+ 
+     /* must have dimension */
+     width: 500px;
+     height: 200px;
+
+     padding: 50px;
+}
+
+.quote p,.quote h1 {
+    color:white;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    font-family: "Arial","Times New Roman", Times, serif;
+}
+
