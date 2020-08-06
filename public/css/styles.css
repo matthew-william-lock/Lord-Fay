@@ -22,7 +22,7 @@ body {
  
      /* must have dimension */
      width: 800px;
-     height: 200px;
+     height: 450px;
 
      padding: 50px;
 }
@@ -49,3 +49,49 @@ hr {
     font-family: "Arial","Times New Roman", Times, serif;
 }
 
+/* Responsive component */
+
+@media screen and (max-width: 1300px){
+
+    body {
+        background-image: url("/img/fay_mobile_big.jpg"); 
+        background-position: right top; 
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .quote {
+        position: fixed;
+        top: 50%; 
+        left: 50%;
+        margin-top: -275px;
+        margin-left: -425px;
+   }
+  
+  }
+
+  @media screen and (max-width: 850px){
+
+    body {
+        background-image: url("/img/fay_mobile_small.jpg"); 
+        background-position: right top; 
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .quote {
+        position: fixed;
+        margin-left: 0; 
+        width: 70%;
+        left: 10%;
+   }
+
+   .quote h1 {
+    font-size: 75px;
+    }
+
+    .quote p {
+        font-size: 30px;
+    }
+  
+  }
