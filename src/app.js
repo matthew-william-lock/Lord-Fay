@@ -1,16 +1,27 @@
 const express = require('express')
 const path = require('path')
-// import routers
-// const userRouter = require('./routers/user')
+const hbs = require('hbs')
 
-// Load Models
-// const User = require('./models/user')
+// Load Sayings
+const sayings = require('./sayings/sayings')
+
+const newSaying = () =>{
+    const index = Math.floor(Math.random() * ((sayings.length) - 0) + 0)
+    return sayings[index]
+}
 
 // Define paths
 const publicDirectoryPath = path.join(__dirname,'../public')
+const viewsDirecory = path.join(__dirname,'../templates/views')
+const partialsDirecory = path.join(__dirname,'../templates/partials')
 
 // Setup the server
 const app = express()
+
+// Setup handlebars engine and views location
+app.set('view engine','hbs')
+app.set('views',viewsDirecory)
+hbs.registerPartials(partialsDirecory)
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
@@ -20,7 +31,14 @@ app.use(express.json())
 
 // Setup routes
 const router = new express.Router()
-// app.use(userRouter)
+router.get('',(req,res)=>{
+    console.log()
+    res.render('index',{
+        title:"I'M LORD FAY BABY",
+        saying:newSaying()
+    })
+})
+app.use(router)
 
 // Exports the app
 module.exports = app
