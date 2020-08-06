@@ -32,7 +32,6 @@ app.use(express.json())
 // Setup routes
 const router = new express.Router()
 router.get('',(req,res)=>{
-    console.log()
     res.render('index',{
         title:"I'M LORD FAY BABY",
         saying:newSaying()
